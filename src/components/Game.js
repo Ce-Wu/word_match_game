@@ -97,7 +97,7 @@ console.log(data)
       if (result.length > 0) {
         arr.forEach(el => el.classList.add('red'))
       result.forEach(el => el.style.color= 'green')
-      setScore((result.length +1) * 2 - arr.length + 1)
+      setScore(((result.length + 2) * 2 )- ((arr.length + 1)))
       } else  {
         arr.forEach(el => el.classList.add('red'))
     }
@@ -143,6 +143,7 @@ console.log(data)
       click={activeResults}
       />
       <Result
+        score={score}
         className={showResultComponent}/>
     </div>
   )

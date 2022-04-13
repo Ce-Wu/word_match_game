@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 
-const Result = ( {className} ) => {
+const Result = ( {className, score} ) => {
   
   const [username, setUsername] = useState("");
   
@@ -14,7 +14,7 @@ const Result = ( {className} ) => {
         <div className='result-wrapper'>
           <h1>Grats {username}</h1>
           <h1>Your score is:</h1>
-          <h1></h1>
+          <h1>{score}</h1>
         </div>
     </div>
   )
