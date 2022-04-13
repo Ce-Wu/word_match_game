@@ -30,4 +30,4 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 LIVE VERSION: 
-https://leafy-elf-dd2698.netlify.app/game
+https://leafy-elf-dd2698.netlify.app
