@@ -1,0 +1,8 @@
+.active {
+  visibility: visible;
+}
+
+.inactive {
+  display: none;
+}
+/*# sourceMappingURL=button.css.map */

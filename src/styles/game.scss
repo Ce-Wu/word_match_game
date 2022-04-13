@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 110vw;
+    height: 110vh;
+    overflow: hidden;
+
+    .app-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 60%;
+        min-height: 60%;
+        border: 5px solid black;
+
+        span {
+            display: block;
+            margin-top: 20px;
+            font-weight: 900;
+            font-size: 1.5em;
+        }
+    }
+
+    .app-wrapper:nth-child(3n) {
+        margin-left: 6rem;
+    }
+
+    
+}
+
+.gray {
+    color: gray;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.active {
+    visibility: visible;
+}
+
+.inactive {
+    display: none;
+}

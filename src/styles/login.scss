@@ -1,0 +1,22 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 70%;
+    max-width: 70vh;
+    min-height: 40%;
+    max-height: 70vh;
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.active{
+    display: flex;
+}
+
+.inactive {
+    display: none;
+}
