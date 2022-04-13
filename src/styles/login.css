@@ -24,6 +24,30 @@
           flex-direction: column;
 }
 
+.login-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.login-container input {
+  margin-top: 2rem;
+  padding: .5rem;
+}
+
+.login-container label {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
 .active {
   display: -webkit-box;
   display: -ms-flexbox;
