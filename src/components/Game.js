@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react'
 import Button from './Button'
 import Result from './Result'
-// import data from '../data'
 import '../styles/game.scss'
 
 const Game = ({}) => {
-  const data = {
+  const data = 
+  {
     question: 'select animals',
     all_words: [
       'hole',
@@ -22,52 +22,17 @@ const Game = ({}) => {
       'passenger',
       'cow',
     ],
-
-    good_words: ['tiger', 'cow'],
-
-    question: "select vehicles",
-        all_words: [
-          "belief",
-          "wire",
-          "car",
-          "bus",
-          "star",
-          "river",
-          "hat",
-          "skirt",
-          "train"
-        ],
-        good_words: [
-          "car",
-          "bus",
-          "train"
-        ],
-        // question: "select colors",
-        // all_words: [
-        //   "jeans",
-        //   "existance",
-        //   "ink",
-        //   "red",
-        //   "blue",
-        //   "yellow",
-        //   "laugh",
-        //   "behavior",
-        //   "expansion",
-        //   "white",
-        //   "black",
-        //   "cakes"
-        // ],
-        // good_words: [
-        //   "red",
-        //   "blue",
-        //   "yellow",
-        //   "white",
-        //   "black"
-        // ]
+  
+    good_words: [
+      'tiger', 
+      'cow'
+    ],
   }
+  
 
-
-console.log(data)
+  //  let randomQuestion = data[Math.floor(Math.random() * data.length)]
+  //  console.log(randomQuestion)
+  
   const [arr, setArr] = useState([])
   
   const handleName = (e) => {
@@ -75,6 +40,7 @@ console.log(data)
     e.currentTarget.classList.toggle('gray')
     if (e.currentTarget.classList.contains('gray')) {
       arr.push(e.target)
+      console.log(data)
     } else {
       setArr(arr.filter((item) => item.id !== nameAttribute))
     }
@@ -110,7 +76,7 @@ console.log(data)
   }
 
   const activeResults = () => {
-    setChangeResultComponent('active')
+    setChangeResultComponent('active-result')
 
   }
 
@@ -150,3 +116,4 @@ console.log(data)
 }
 
 export default Game
+
