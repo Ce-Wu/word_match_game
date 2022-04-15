@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --showPseudoClassTextBad: none;
+  --showPseudoClassTextGood: none;
+}
+
 .App {
   display: flex;
   justify-content: center;
@@ -17,11 +22,15 @@
   visibility: visible;
 }
 
+.inactive {
+  display: none;
+}
+
 .active-result {
   position: absolute;
   visibility: visible;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -29,9 +38,6 @@
   overflow: hidden;
 }
 
-.inactive {
-  display: none;
-}
 
 button {
   text-transform: uppercase;
