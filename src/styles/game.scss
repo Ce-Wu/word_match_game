@@ -24,19 +24,20 @@
             font-weight: 900;
             font-size: 1.5em;
             padding: 2rem;
+            cursor: pointer;
         }
 
         span::before, span::after {
             content: 'Good';
             position: absolute;
             top: 0;
-            color: green;
+            color: rgb(6, 203, 6);
             
         }
 
         span::after {
             content: 'Bad';
-            color: red;
+            color: rgb(255, 47, 0);
             display: var(--showPseudoClassTextBad);
         }
 
@@ -59,7 +60,7 @@
 }
 
 .gray {
-    color: gray;
+    color: rgb(182, 182, 182);
 }
 
 .green {
@@ -67,7 +68,7 @@
 }
 
 .red {
-    color: red;
+    color: rgb(211, 0, 0);
 }
 
 .active {
