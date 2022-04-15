@@ -5,28 +5,55 @@
     align-items: center;
     width: 100vw;
     height: 130vh;
-    overflow: hidden;
+    background-color: white;
 
     .app-wrapper {
         position: relative;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        width: 60%;
-        min-height: 60%;
+        width: 70%;
+        min-height: 50%;
         border: 5px solid black;
+        border-radius: 8px;
 
         span {
             display: block;
+            position: relative;
             margin-top: 20px;
             font-weight: 900;
             font-size: 1.5em;
+            padding: 2rem;
         }
+
+        span::before, span::after {
+            content: 'Good';
+            position: absolute;
+            top: 0;
+            color: green;
+            
+        }
+
+        span::after {
+            content: 'Bad';
+            color: red;
+            display: var(--showPseudoClassTextBad);
+        }
+
+        span::before {
+            display: var(--showPseudoClassTextGood);
+            background-color: white;
+            z-index: 5;
+        }
+
     }
 
-    .app-wrapper:nth-child(3n) {
-        margin-left: 6rem;
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
     }
+
+
 
     
 }
