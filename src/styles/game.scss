@@ -78,3 +78,16 @@
 .inactive {
     display: none;
 }
+
+@media screen and (max-width: 1200px) {
+    .container {
+        .app-wrapper {
+            overflow-y: scroll;
+            span {
+                padding: 0;
+                font-size: 1rem;
+
+            }
+        }
+    }
+}
