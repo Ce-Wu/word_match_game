@@ -7,7 +7,7 @@ const Result = ( {className, score} ) => {
   const [username, setUsername] = useState("");
   
   useEffect(() => {
-    setUsername(localStorage.getItem("username"))
+    setUsername(sessionStorage.getItem("username"))
   });
 
   return (

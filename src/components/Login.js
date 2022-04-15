@@ -21,7 +21,7 @@ function Login({  }) {
   const buttonName = 'play'
 
 useEffect(() => {
-  localStorage.setItem('username', username);
+  sessionStorage.setItem('username', username);
 });
 
   return (
