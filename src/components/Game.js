@@ -85,6 +85,8 @@ const Game = ({}) => {
 
   return (
     <div className="container">
+      <div className='cloud'></div>
+      <div className='cloud-two'></div>
       <h1>{question}</h1>
       <div className={disactive}>
         {allWords.map((word) => (
