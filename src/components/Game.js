@@ -32,51 +32,51 @@ const Game = ({}) => {
     randomData()
   }, []);
 
-  const [arr, setArr] = useState([])
+  const [arrAllWords, setArrAllWords] = useState([])
+  const goodWordsArr = [goodWords]
+  const [changeButton, setChangeButton] = useState('')
+  const [activeFinishButton, setChangeActiveFinishButton] = useState('inactive')
+  const [showResultComponent, setChangeResultComponent] = useState('inactive')
+  const [score, setScore] = useState(0)
+  const [disactive, setDisactive] = useState('app-wrapper')
   
   const handleName = (e) => {
     const nameAttribute = e.target.id
     e.currentTarget.classList.toggle('gray')
     if (e.currentTarget.classList.contains('gray')) {
-      arr.push(e.target)
+      arrAllWords.push(e.target)
     } else {
-      setArr(arr.filter((item) => item.id !== nameAttribute))
+      setArrAllWords(arrAllWords.filter((item) => item.id !== nameAttribute))
     }
   }
   
-  const goodWordsArr = [goodWords]
-  const [changeButton, setChangeButton] = useState('')
-  const [activeButton, setChangeActiveButton] = useState('inactive')
-  const [showResultComponent, setChangeResultComponent] = useState('inactive')
-  const [score, setScore] = useState(0)
-  const [disactive, setDisactive] = useState('app-wrapper')
 
 
   const checkResults=()=> {
-      let result = arr.filter(wordsArr => goodWordsArr[0].some(wordsResult => wordsArr.innerText === wordsResult))
+      let result = arrAllWords.filter(wordsArr => goodWordsArr[0].some(wordsResult => wordsArr.innerText === wordsResult))
 
       if (result.length > 0) {
-        arr.forEach(el => el.classList.add('red'))
-        arr.forEach(el => el.style.setProperty('--showPseudoClassTextBad', 'block'))
+        arrAllWords.forEach(el => el.classList.add('red'))
+        arrAllWords.forEach(el => el.style.setProperty('--showPseudoClassTextBad', 'block'))
         
         result.forEach(el => el.style.color= 'green')
         result.forEach(el => el.style.setProperty('--showPseudoClassTextGood', 'block'))
-        setScore((((result.length) * 2 ) - ((arr.length - result.length) + (goodWordsArr[0].length - result.length))))
-        console.log(goodWordsArr[0])
+        setScore((((result.length) * 2 ) - ((arrAllWords.length - result.length) + (goodWordsArr[0].length - result.length))))
+  
       } else  {
-        arr.forEach(el => el.classList.add('red'))
-        arr.forEach(el => el.style.setProperty('--showPseudoClassTextBad', 'block'))
+        arrAllWords.forEach(el => el.classList.add('red'))
+        arrAllWords.forEach(el => el.style.setProperty('--showPseudoClassTextBad', 'block'))
     }
     setChangeButton('inactive')
-    setChangeActiveButton('active')
+    setChangeActiveFinishButton('active')
   }
   
   const activeResults = () => {
-    let result = arr.filter(wordsArr => goodWordsArr[0].some(wordsResult => wordsArr.innerText === wordsResult))
+    let result = arrAllWords.filter(wordsArr => goodWordsArr[0].some(wordsResult => wordsArr.innerText === wordsResult))
     result.forEach(el => el.style.setProperty('--showPseudoClassTextGood', 'none'))
 
     setChangeResultComponent('active-result')
-    setChangeActiveButton('inactive')
+    setChangeActiveFinishButton('inactive')
     setDisactive('inactive')
   }
 
@@ -104,7 +104,7 @@ const Game = ({}) => {
       click={checkResults}
       />
       <Button
-      className={activeButton}
+      className={activeFinishButton}
       buttonName='finish game' 
       click={activeResults}
       />

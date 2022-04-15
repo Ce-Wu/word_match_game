@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Button from './Button'
 import Game from './Game'
-import App from '../App'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import '../styles/login.scss'
 
@@ -10,11 +9,10 @@ function Login({  }) {
     e.preventDefault()
   }
 
-  const [activeId, setActiveId] = useState('active')
-  // const [handleInput, setHandleInput] = useState('')
+  const [active, setActive] = useState('active')
 
-  const activeIdOn = () => {
-    setActiveId('inactive')
+  const activeOn = () => {
+    setActive('inactive')
   }
 
   const [username, setUsername] = useState("");
@@ -40,8 +38,8 @@ useEffect(() => {
             to="/game">
             <Button 
               buttonName={buttonName}
-              className={activeId}
-              click={activeIdOn}
+              className={active}
+              click={activeOn}
               />
           </Link>
 
@@ -51,7 +49,6 @@ useEffect(() => {
             </Route>
           </Routes>
         </form>
-        {/* <p>{handleInput}</p> */}
       </div>
     </BrowserRouter>
   )
