@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 70%;
-    max-width: 70vh;
+    min-width: 50%;
     min-height: 40%;
-    max-height: 70vh;
+    border: 1px solid black;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px ;
+    background-image: linear-gradient(rgb(0, 157, 255), rgb(255, 255, 255));
 
     form {
         display: flex;
@@ -22,14 +24,39 @@
     input {
         margin-top: 2rem;
         padding:.5rem;
+        border-radius: 6px;
+        border: 3px solid aliceblue;
+    }
+
+    input:focus {
+        outline: 3px solid rgb(12,121,216);
     }
 
     label {
         font-size: 2rem;
         text-transform: uppercase;
         font-weight: 900;
+        color: aliceblue;
     }
 
+    button {
+        border: 3px solid aliceblue;
+        background-color:  rgb(12, 121, 216);
+        transition: .3s;
+
+        span {
+            color: aliceblue;
+        }
+    }
+
+    
+    button:hover {
+        background-color: aliceblue;
+        border: 3px solid rgb(12,121,216);;
+            span {
+                color: rgb(12,121,216);
+            }
+      }
 }
 
 .active{
