@@ -24,14 +24,11 @@ const Game = ({}) => {
      });
   }
 
-   const randomMargin = {
-    margin: `${Math.floor(Math.random() * 45 + 20)}px`,
-  }
+  //  const randomMargin = {
+  //   margin: `${Math.floor(Math.random() * 45 + 20)}px`,
+  // }
   
-  useEffect(() => {
-    randomData()
-  }, []);
-
+  
   const [arrAllWords, setArrAllWords] = useState([])
   const goodWordsArr = [goodWords]
   const [changeButton, setChangeButton] = useState('')
@@ -39,7 +36,13 @@ const Game = ({}) => {
   const [showResultComponent, setChangeResultComponent] = useState('inactive')
   const [score, setScore] = useState(0)
   const [disactive, setDisactive] = useState('app-wrapper')
+  const [randomMargin, setRandomMargin] = useState('null')
   
+  useEffect(() => {
+    randomData()
+    setRandomMargin(`${Math.floor(Math.random() * 45 + 20)}px`)
+  }, []);
+
   const handleName = (e) => {
     const nameAttribute = e.target.id
     e.currentTarget.classList.toggle('gray')
@@ -90,7 +93,7 @@ const Game = ({}) => {
             key={word}
             id={word}
             name={word}
-            style={randomMargin}
+            style={{margin: {randomMargin}}}
             onClick={handleName}
           >
             {word}
